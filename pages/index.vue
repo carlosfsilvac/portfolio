@@ -1,31 +1,43 @@
 <template>
-  <article class="space-y-8">
+  <article class="space-y-6">
+    <h1 class="pt-0 mt-0 inline-block">
+      Olá, seja muito bem-vindo ao meu espaço!
+    </h1>
+    <span class="pl-4 inline-block animate-bounce text-3xl">👋</span>
+
     <p>
-      Sou um desenvolvedor web com 6 anos de experiência, especializado tanto em
-      grandes projetos corporativos quanto em iniciativas ágeis de startups, com
-      um foco particular no front-end. Minha trajetória como full stack inclui
-      um período valioso como desenvolvedor autônomo, onde aprimorei minhas
-      competências em gerenciamento de projetos e comunicação.
+      Há 6 anos venho trabalhando em projetos de desenvolvimento web. Por aqui
+      você pode encontrar um pouco do que já fiz e o que estou fazendo.
     </p>
     <p>
-      Fora do ambiente profissional, valorizo meu tempo com minha família, minha
-      esposa Isabella e nossa filha Ísis, além de nossos dois cães. Meus
-      interesses pessoais abrangem psicologia, história e autoconhecimento,
-      complementando minhas habilidades profissionais. Sou também um entusiasta
-      de esportes, praticando corrida de rua e futebol, paixões que cultivam
-      disciplina e trabalho em equipe.
+      Proeficiente em JavaScript e TypeScript, a maior parte da minha carreira
+      atuei como front-end, sempre tive muito interesse por UI/UX e em como
+      criar interfaces que proporcionem uma boa experiência para o usuário.
     </p>
     <p>
-      Minha abordagem é equilibrar expertise técnica com desenvolvimento
-      pessoal, buscando sempre contribuir positivamente nos projetos e equipes
-      com os quais trabalho.
+      Atualmente, tenho dedicado meu tempo livre desenvolvendo projetos pessoais
+      e de clientes,
+      <a href="blog">escrevendo artigos</a> e criando conteúdo sobre Vue
+      <UIcon class="h-4 w-4" name="i-mdi-vuejs" /> e Nuxt
+      <UIcon name="i-mdi-nuxt" />. Acredito que compartilhar conhecimento é uma
+      das melhores formas de aprendizado.
     </p>
-    <div class="flex items-center flex-col gap-2">
-      <img alt="Carlos e seu cachorro K9 na praia" src="/img/eu-e-k9.png" />
+    <p>
+      Adoro passar tempo com minha família, praticar esportes e viajar. Gosto de
+      ler sobre psicologia, filosofia e tecnologia. Desenvolver o
+      autoconhecimento é algo que julgo <i>essencial</i>.
+    </p>
+    <div class="flex items-center flex-col gap-2 pt-8">
+      <img
+        alt="Carlos e seu cachorro K9 na praia"
+        src="/img/eu-e-k9.png"
+        class="rounded-lg w-80 h-80 md:h-96 md:w-96 object-cover shadow-lg"
+      />
       <small
-        class="text-xs text-zinc-400 dark:text-zinc-200 font-semibold italic"
+        class="text-sm text-zinc-400 dark:text-zinc-400 font-medium italic"
       >
-        Guaratuba - PR - 2021 (PS: o K9 quase não gosta de ir para a praia! 😄)
+        Guaratuba - Paraná, Brasil. (ps: K9 ama uma praia!
+        <span class="not-italic">😄</span>)
       </small>
     </div>
   </article>

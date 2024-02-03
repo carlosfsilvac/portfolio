@@ -1,31 +1,25 @@
 <template>
-  <div class="space-y-8">
-    <h1>
-      <a
-        class="hover:underline"
-        href="https://ideclatra.com.br/"
-        target="_blank"
-      >
-        iDeclatra
-      </a>
+  <div class="space-y-6">
+    <h1 class="p-0 m-0">
+      <a href="https://ideclatra.com.br/" target="_blank"> iDeclatra </a>
     </h1>
     <p>
       Projeto construído por mim de ponta a ponta enquanto atuava na empresa
-      Matilha Estúdio. Trata-se de um headless CMS criado com Prismic e Next.js,
-      hospedado na Vercel.
+      Matilha Estúdio. Trata-se de um site institucional com blog, no modelo
+      headless CMS criado com Prismic e Next.js, hospedado na Vercel.
     </p>
     <div class="flex items-center space-x-4 text-zinc-500">
-      <LazyIconPrismic />
+      <LazyIconPrismicCMS />
       <LazyIconNextJs />
-      <LazyIconTailwind />
+      <LazyIconTailwindCss />
       <LazyIconTypeScript />
-      <LazyIconReact />
+      <LazyIconReactJs />
     </div>
     <UCarousel
       v-slot="{ item }"
       :items="ideclatraPictures"
       :ui="{ item: 'basis-full' }"
-      class="overflow-hidden"
+      class="overflow-hidden rounded-lg"
       arrows
     >
       <img :src="item" />

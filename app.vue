@@ -1,60 +1,46 @@
 <template>
-  <div class="container mx-auto max-w-2xl px-6 md:px-0">
-    <nav
-      class="flex flex-col md:space-y-0 space-y-4 md:flex-row md:justify-between border-b-zinc-150 dark:border-b-zinc-800 border-b py-6"
-    >
-      <router-link
-        class="font-bold text-3xl md:text-xl md:text-left text-center text-gradient hover:opacity-90"
-        to="/"
-        >Carlos Silva</router-link
-      >
-      <div
-        class="space-x-4 text-zinc-600 flex md:justify-end items-center justify-center"
-      >
-        <router-link
-          exact-active-class="active-route"
-          class="hover:border-b-2 dark:hover:border-zinc-700 dark:text-zinc-200"
-          to="/"
-          >Sobre mim</router-link
+  <div>
+    <div class="container mx-auto max-w-2xl px-6 md:px-0">
+      <header>
+        <nav
+          class="flex flex-col md:space-y-0 space-y-4 md:flex-row md:justify-between border-b-zinc-150 dark:border-b-zinc-800 border-b py-6"
         >
-        <router-link
-          exact-active-class="active-route"
-          class="hover:border-b-2 dark:hover:border-zinc-700 dark:text-zinc-200"
-          to="/articles"
-          >Artigos</router-link
-        >
-        <router-link
-          exact-active-class="active-route"
-          class="hover:border-b-2 dark:hover:border-zinc-700 dark:text-zinc-200"
-          to="/portfolio"
-          >Portfólio</router-link
-        >
-        <router-link
-          exact-active-class="active-route"
-          class="hover:border-b-2 dark:hover:border-zinc-700 dark:text-zinc-200"
-          to="/contact"
-          >Contato</router-link
-        >
-        <ClientOnly>
-          <UButton
-            :icon="
-              isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'
-            "
-            variant="ghost"
-            aria-label="Theme"
-            @click="isDark = !isDark"
-          />
-          <template #fallback>
-            <div class="w-8 h-8" />
-          </template>
-        </ClientOnly>
-      </div>
-    </nav>
-    <main class="pt-8 pb-16">
-      <router-view></router-view>
-    </main>
+          <router-link
+            class="font-bold text-3xl md:text-xl md:text-left text-center text-gradient hover:opacity-90"
+            to="/"
+            >Carlos Silva</router-link
+          >
+          <div
+            class="space-x-4 text-zinc-600 flex md:justify-end items-center justify-center"
+          >
+            <HeaderLink title="Sobre" url="/" />
+            <HeaderLink title="Blog" url="/blog" />
+            <HeaderLink title="Portfólio" url="/portfolio" />
+            <HeaderLink title="Contato" url="/contato" />
+            <ClientOnly>
+              <UButton
+                :icon="
+                  isDark
+                    ? 'i-heroicons-moon-20-solid'
+                    : 'i-heroicons-sun-20-solid'
+                "
+                variant="ghost"
+                aria-label="Theme"
+                @click="isDark = !isDark"
+              />
+              <template #fallback>
+                <div class="w-8 h-8"></div>
+              </template>
+            </ClientOnly>
+          </div>
+        </nav>
+      </header>
+      <main class="pt-8 pb-16">
+        <router-view></router-view>
+      </main>
+    </div>
+    <ScrollToTop />
   </div>
-  <ScrollToTop />
 </template>
 
 <script setup lang="ts">
@@ -72,22 +58,79 @@ const isDark = computed({
 <style>
 body {
   background: #f7f7f7;
-  font-family: Georgia, Palatino, "Palatino Linotype", Times, " Times New Roman",
-    serif;
+  font-family: Georgia, Times, "Times New Roman", serif;
 }
 
 .dark body {
   background: #171717;
 }
 
-h1 {
-  font-size: 32px;
+.article-publish-date-text {
+  font-size: 14px;
   color: #484848;
-  line-height: 48px;
+  font-style: italic;
+  padding: 0;
+  margin: 0;
+}
+
+.dark .article-publish-date-text {
+  color: #d4d4d8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 8px;
+  margin-top: 24px;
   font-style: italic;
 }
 
-.dark h1 {
+h1 {
+  font-size: 32px;
+  line-height: 48px;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 40px;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 36px;
+}
+
+ul {
+  list-style: disc;
+  list-style-type: circle;
+  padding-left: 1rem;
+}
+
+ul li {
+  padding: 0.75rem 0;
+  font-size: 18px;
+  color: #484848;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #484848;
+  font-style: italic;
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
   color: #d4d4d8;
 }
 
@@ -97,12 +140,53 @@ p {
   line-height: 32px;
 }
 
+p a {
+  border-bottom: 2px solid #35eb9a;
+}
+
+p a:hover {
+  border-bottom: 2px solid #4fb2bc;
+}
+
 .dark p {
   color: #d4d4d8;
 }
 
 .active-route {
-  border-bottom: 2px solid #35eb9a;
+  font-weight: bold;
+}
+
+.article-cover-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+pre {
+  background-color: #262626;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+  margin-top: 4px;
+  font-size: 1rem;
+  font-family: "Courier New", monospace;
+}
+
+ol {
+  list-style: decimal;
+  padding-left: 1rem;
+}
+
+ol li {
+  padding: 1rem 0;
+  font-size: 1.25rem;
+}
+
+.dark li {
+  color: #d4d4d8;
 }
 
 .text-gradient {
