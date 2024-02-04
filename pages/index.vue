@@ -10,7 +10,7 @@
       você pode encontrar um pouco do que já fiz e o que estou fazendo.
     </p>
     <p>
-      Proeficiente em JavaScript e TypeScript, a maior parte da minha carreira
+      Proficiente em JavaScript e TypeScript, a maior parte da minha carreira
       atuei como front-end, sempre tive muito interesse por UI/UX e em como
       criar interfaces que proporcionem uma boa experiência para o usuário.
     </p>
