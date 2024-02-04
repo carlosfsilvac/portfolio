@@ -1,7 +1,13 @@
 <template>
   <div class="space-y-6">
     <h1 class="p-0 m-0">
-      <a href="https://ideclatra.com.br/" target="_blank"> iDeclatra </a>
+      <a
+        href="https://ideclatra.com.br/"
+        class="hover:border-b-2 hover:border-b-primary"
+        target="_blank"
+      >
+        iDeclatra
+      </a>
     </h1>
     <p>
       Projeto construído por mim de ponta a ponta enquanto atuava na empresa
@@ -19,10 +25,11 @@
       v-slot="{ item }"
       :items="ideclatraPictures"
       :ui="{ item: 'basis-full' }"
-      class="overflow-hidden rounded-lg"
+      class="overflow-hidden rounded-lg shadow-xl"
       arrows
+      indicators
     >
-      <img :src="item" />
+      <img :src="item" alt="projeto ideclatra" />
     </UCarousel>
   </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <div class="space-y-8">
     <p>
-      Se você deseja entrar em contato comigo, fique à vontade para me enviar um
+      Se você deseja entrar em contato comigo, fique à vontade para enviar um
       e-mail para
       <a href="mailto:carlosfsilva.c@gmail.com">carlosfsilva.c@gmail.com</a>
     </p>

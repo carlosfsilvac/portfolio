@@ -31,7 +31,7 @@
       <img
         alt="Carlos e seu cachorro K9 na praia"
         src="/img/eu-e-k9.png"
-        class="rounded-lg w-80 h-80 md:h-96 md:w-96 object-cover shadow-lg"
+        class="rounded-lg w-80 h-80 md:h-96 md:w-96 object-cover shadow-xl"
       />
       <small
         class="text-sm text-zinc-400 dark:text-zinc-400 font-medium italic"

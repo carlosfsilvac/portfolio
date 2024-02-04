@@ -12,7 +12,7 @@ export default defineNuxtConfig({
   },
   content: {
     highlight: {
-      theme: "monokai",
+      theme: "dracula-soft",
     },
   },
 });
