@@ -10,7 +10,7 @@ export default defineNuxtConfig({
       "@nuxtjs/google-fonts",
       {
         families: {
-          "Roboto Slab": "200..900",
+          Roboto: "200..900",
           SpaceMono: "400..700",
         },
       },
