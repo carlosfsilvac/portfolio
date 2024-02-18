@@ -6,6 +6,14 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxtjs/eslint-module",
     "@vueuse/nuxt",
+    [
+      "@nuxtjs/google-fonts",
+      {
+        families: {
+          Inter: "200..700",
+        },
+      },
+    ],
   ],
   ui: {
     icons: ["vscode-icons", "heroicons", "mdi"],

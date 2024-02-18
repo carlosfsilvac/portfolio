@@ -1,103 +1,103 @@
 ---
-slug: como-criar-um-blog-usando-markdown-com-nuxt-content
-description: Na era digital, as possibilidades para criar um blog são amplas e diversificadas, variando de plataformas tradicionais como WordPress e Medium até geradores de sites estáticos como Gatsby, Hugo e Jekyll. Este guia explora como você pode utilizar o Nuxt Content—uma ferramenta poderosa do ecossistema Nuxt.js—para criar um blog aproveitando a simplicidade do Markdown.
+slug: how-to-create-a-blog-using-markdown-with-nuxt-content
+description: In the digital era, there are various options to create a blog, ranging from traditional platforms like WordPress and Medium to static site generators like Gatsby, Hugo, and Jekyll. This guide explores how you can use Nuxt Content—a powerful tool in the Nuxt.js ecosystem—to create a blog, leveraging the simplicity of Markdown.
 author: Carlos Silva
-date: 31 de Janeiro de 2024
-tags: Nuxt.js, Markdown, Nuxt Content, Desenvolvimento Web, Blogging
-image: /img/articles/como-criar-um-blog-usando-markdown-com-nuxt-content/cover.png
+date: January 31, 2024
+tags: Nuxt.js, Markdown, Nuxt Content, Web Development, Blogging
+image: /img/articles/how-to-create-a-blog-using-markdown-with-nuxt-content/cover.png
 ---
 
-# Guia Completo para Criar um Blog com Markdown e Nuxt Content
+# Complete Guide to Creating a Blog with Markdown and Nuxt Content
 
-[Carlos Silva, 31 de Janeiro de 2024]{.article-publish-date-text}
+[Carlos Silva, January 31, 2024]{.article-publish-date-text}
 \
 \
-![Cover Image](/img/articles/como-criar-um-blog-usando-markdown-com-nuxt-content/cover.png){.article-cover-image}
+![Cover Image](/img/articles/how-to-create-a-blog-using-markdown-with-nuxt-content/cover.png){.article-cover-image}
 \
-No cenário digital atual, as opções para criar um blog vão de plataformas tradicionais como WordPress e Medium até geradores de sites estáticos, como Gatsby, Hugo e Jekyll. Este guia completo visa te apresentar uma alternativa poderosa usando o Nuxt Content, um módulo do framework Nuxt.js, para construir um blog com Markdown de maneira prática e amigável para desenvolvedores.
+In the current digital landscape, the options for creating a blog range from traditional platforms like WordPress and Medium to static site generators like Gatsby, Hugo, and Jekyll. This comprehensive guide aims to introduce you to a powerful alternative using Nuxt Content, a module of the Nuxt.js framework, to build a blog with Markdown in a practical and developer-friendly way.
 
-## Introdução ao Nuxt.js
+## Introduction to Nuxt.js
 
-Nuxt.js é um framework versátil e open source baseado em Vue.js, projetado para tornar o desenvolvimento de aplicações Vue.js universais ou de página única mais simples. Com configurações prontas para uso, o Nuxt.js facilita a renderização no lado do servidor, o roteamento e a organização do layout das páginas, constituindo uma base sólida para projetos de desenvolvimento web, incluindo plataformas de blog.
+Nuxt.js is a versatile and open-source framework based on Vue.js, designed to simplify the development of universal or single-page Vue.js applications. With ready-to-use configurations, Nuxt.js makes server-side rendering, routing, and page layout organization easier, providing a solid foundation for web development projects, including blogging platforms.
 
-### Principais Funcionalidades do Nuxt.js
+### Key Features of Nuxt.js
 
-- **Divisão Automática de Código:** Melhora o tempo de carregamento ao carregar apenas o JavaScript necessário para a página em uso.
-- **Renderização do Lado do Servidor (SSR):** Melhora o SEO e a carga inicial da página ao renderizar componentes Vue no servidor.
-- **Geração de Site Estático:** Permite gerar uma versão estática do seu site, que pode ser hospedada em qualquer lugar.
+- **Automatic Code Splitting:** Improves loading time by only loading the necessary JavaScript for the current page.
+- **Server-Side Rendering (SSR):** Enhances SEO and initial page load by rendering Vue components on the server.
+- **Static Site Generation:** Allows generating a static version of your site that can be hosted anywhere.
 
-## Entendendo o Markdown
+## Understanding Markdown
 
-Markdown é uma linguagem de marcação leve que permite a formatação de texto de maneira simples, projetada para ser convertida em HTML de forma estruturalmente válida. Facilita para escritores e desenvolvedores a criação de conteúdo num formato legível e de fácil escrita, que depois é convertido para HTML.
+Markdown is a lightweight markup language that allows simple text formatting, designed to be easily converted into structurally valid HTML. It makes it easier for writers and developers to create content in a readable and easy-to-write format, which is then converted to HTML.
 
-### Por que Usar Markdown para Blogar?
+### Why Use Markdown for Blogging?
 
-- **Simplicidade:** Permite que você se concentre no conteúdo, sem se preocupar com a complexidade das tags HTML.
-- **Portabilidade:** Conteúdo em Markdown pode ser facilmente compartilhado, copiado e transportado sem perda de formatação. Eu por exemplo, escrevo os artigos no Obsidian ou no Notion e apenas copio para o meu projeto em arquivos markdown.
-- **Versatilidade:** Compatível com várias plataformas e ferramentas, tornando-se um formato universal para a criação de conteúdo.
+- **Simplicity:** Allows you to focus on content without worrying about the complexity of HTML tags.
+- **Portability:** Markdown content can be easily shared, copied, and transported without losing formatting. For example, I write articles in Obsidian or Notion and simply copy them to my Markdown project.
+- **Versatility:** Compatible with various platforms and tools, making it a universal format for content creation.
 
-## Apresentando o Nuxt Content
+## Introducing Nuxt Content
 
-Nuxt Content é um módulo oficial do Nuxt.js que potencializa seu fluxo de trabalho ao permitir que você escreva seu conteúdo em Markdown e o acesse por meio de uma API similar ao MongoDB, criando uma integração perfeita entre seu conteúdo e sua aplicação.
+Nuxt Content is an official module of Nuxt.js that enhances your workflow by allowing you to write your content in Markdown and access it through a MongoDB-like API, creating a seamless integration between your content and your application.
 
-### Vantagens do Nuxt Content
+### Advantages of Nuxt Content
 
-- **Facilidade de Uso:** Escreva em Markdown e transforme seu conteúdo automaticamente em uma API JSON.
-- **Flexibilidade:** Oferece suporte a Markdown, CSV, YAML, JSON(5) e XML de forma nativa.
-- **Busca de Texto Completo:** Inclui uma funcionalidade de busca poderosa para localizar facilmente o conteúdo.
+- **Ease of Use:** Write in Markdown and automatically transform your content into a JSON API.
+- **Flexibility:** Native support for Markdown, CSV, YAML, JSON(5), and XML.
+- **Full-Text Search:** Includes powerful search functionality to easily locate content.
 
-## Guia Passo a Passo para Montar Seu Blog
+## Step-by-Step Guide to Building Your Blog
 
-### 1. Configurando o Nuxt.js
+### 1. Setting Up Nuxt.js
 
-Primeiramente, crie um novo projeto Nuxt.js, caso ainda não tenha feito. Isso prepara seu ambiente de desenvolvimento com o Nuxt.js.
+First, create a new Nuxt.js project if you haven't already. This sets up your development environment with Nuxt.js.
 
 ```bash
-npx create-nuxt-app meu-blog
+npx create-nuxt-app my-blog
 ```
 
-### 2. Adicionando o Nuxt Content
+### 2. Adding Nuxt Content
 
-Instale o Nuxt Content para adicionar funcionalidades de gerenciamento de conteúdo à sua aplicação Nuxt.js.
+Install Nuxt Content to add content management functionalities to your Nuxt.js application.
 
 ```bash
 npm install @nuxt/content
 ```
 
-### 3. Configurando o Nuxt Content
+### 3. Configuring Nuxt Content
 
-Altere seu arquivo nuxt.config.js para incluir o Nuxt Content como um módulo, habilitando suas funcionalidades no seu projeto.
+Modify your nuxt.config.js file to include Nuxt Content as a module, enabling its functionalities in your project.
 
-``` typescript
+```typescript
 // nuxt.config.ts
 export default {
   modules: ['@nuxt/content'],
   content: {
-    // Configurações opcionais
+    // Optional configurations
   },
 }
 ```
 
-### 4. Produzindo Conteúdo com Markdown
+### 4. Producing Content with Markdown
 
-Crie seus arquivos de conteúdo em formato Markdown dentro do diretório content/. Segue um exemplo de uma postagem de blog simples:
+Create your content files in Markdown format inside the content/ directory. Here's an example of a simple blog post:
 
 ```markdown
 ---
-title: Meu Primeiro Post no Blog
-slug: meu-primeiro-post-no-blog
-description: Uma introdução à minha jornada de blogueiro
-date: 31 de Janeiro de 2024
+title: My First Blog Post
+slug: my-first-blog-post
+description: An introduction to my blogging journey
+date: January 31, 2024
 author: Carlos Silva
-tags: [Nuxt.js, Blogging, Desenvolvimento Web]
+tags: [Nuxt.js, Blogging, Web Development]
 ---
 
-Bem-vindo ao meu primeiro post no blog utilizando Nuxt Content e Markdown. Esta jornada explora a integração fluída entre escrita e desenvolvimento web.
+Welcome to my first blog post using Nuxt Content and Markdown. This journey explores the seamless integration between writing and web development.
 ```
 
-### 5. Desenvolvendo a Interface do Blog
+### 5. Developing the Blog Interface
 
-Usando a tag `<ContentList>` do Nuxt você pode acessar os posts dentro da pasta content/blog e exibi-los na sua aplicação. Segue um exemplo de como você pode fazer isso:
+Using the `<ContentList>` tag from Nuxt, you can access the posts inside the content/blog folder and display them in your application. Here's an example of how you can do that:
 
 ```vue
 <!-- app.vue -->
@@ -117,6 +117,6 @@ Usando a tag `<ContentList>` do Nuxt você pode acessar os posts dentro da pasta
 </template>
 ```
 
-## Conclusão
+## Conclusion
 
-Usar o Nuxt Content e Markdown para criar um blog oferece uma combinação ideal de simplicidade, flexibilidade e eficácia, representando uma excelente escolha para desenvolvedores e criadores de conteúdo. Aproveite a facilidade de escrita do Markdown e a integração perfeita com o Nuxt Content para criar um blog que atenda às suas necessidades e expectativas.
+Using Nuxt Content and Markdown to create a blog offers an ideal combination of simplicity, flexibility, and effectiveness, making it an excellent choice for developers and content creators. Take advantage of the ease of writing in Markdown and the seamless integration with Nuxt Content to create a blog that meets your needs and expectations.

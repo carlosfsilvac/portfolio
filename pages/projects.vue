@@ -10,16 +10,13 @@
       </a>
     </h1>
     <p>
-      Projeto construído por mim de ponta a ponta enquanto atuava na empresa
-      Matilha Estúdio. Trata-se de um site institucional com blog, no modelo
-      headless CMS criado com Prismic e Next.js, hospedado na Vercel.
+      Project built by me from start to finish while working at Matilha Estúdio.
+      It is an institutional website with a blog, using the headless CMS model
+      created with Prismic and Nuxt.js, hosted on Vercel.
     </p>
     <div class="flex items-center space-x-4 text-zinc-500">
-      <LazyIconPrismicCMS />
-      <LazyIconNextJs />
-      <LazyIconTailwindCss />
-      <LazyIconTypeScript />
-      <LazyIconReactJs />
+      <UIcon name="i-mdi-vuejs" />
+      <UIcon name="i-mdi-nuxt" />
     </div>
     <UCarousel
       v-slot="{ item }"

@@ -6,17 +6,17 @@
           class="flex flex-col md:space-y-0 space-y-4 md:flex-row md:justify-between border-b-zinc-150 dark:border-b-zinc-800 border-b py-6"
         >
           <router-link
-            class="font-bold text-3xl md:text-xl md:text-left text-center text-gradient hover:opacity-90"
+            class="font-black text-3xl md:text-xl md:text-left text-center text-gradient hover:opacity-90"
             to="/"
             >Carlos Silva</router-link
           >
           <div
             class="space-x-4 text-zinc-600 flex md:justify-end items-center justify-center"
           >
-            <HeaderLink title="Sobre" url="/" />
+            <HeaderLink title="About" url="/" />
             <HeaderLink title="Blog" url="/blog" />
-            <HeaderLink title="Portfólio" url="/portfolio" />
-            <HeaderLink title="Contato" url="/contato" />
+            <HeaderLink title="Projects" url="/projects" />
+            <HeaderLink title="Contact" url="/contact" />
             <ClientOnly>
               <UButton
                 :icon="
@@ -58,7 +58,7 @@ const isDark = computed({
 <style>
 body {
   background: #f7f7f7;
-  font-family: Georgia, Times, "Times New Roman", serif;
+  font-family: "Inter" sans-serif;
 }
 
 .dark body {
