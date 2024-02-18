@@ -58,7 +58,7 @@ const isDark = computed({
 <style>
 body {
   background: #f7f7f7;
-  font-family: "Poppins" sans-serif;
+  font-family: "Roboto Slab" serif;
 }
 
 .dark body {
