@@ -4,7 +4,7 @@
     <span class="pl-4 inline-block animate-bounce text-3xl">👋</span>
 
     <p>
-      For the past 6 years, I have been working on web development projects.
+      For the past 5 years, I have been working on web development projects.
       Here, you can find some of my past work and what I am currently working
       on.
     </p>

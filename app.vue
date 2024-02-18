@@ -6,7 +6,7 @@
           class="flex flex-col md:space-y-0 space-y-4 md:flex-row md:justify-between border-b-zinc-150 dark:border-b-zinc-800 border-b py-6"
         >
           <router-link
-            class="font-black text-3xl md:text-xl md:text-left text-center text-gradient hover:opacity-90"
+            class="font-black text-4xl italic md:text-xl md:text-left text-center text-gradient hover:opacity-90"
             to="/"
             >Carlos Silva</router-link
           >
