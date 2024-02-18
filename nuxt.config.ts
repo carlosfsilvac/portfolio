@@ -10,7 +10,8 @@ export default defineNuxtConfig({
       "@nuxtjs/google-fonts",
       {
         families: {
-          Inter: "200..700",
+          Poppins: "200..900",
+          SpaceMono: "400..700",
         },
       },
     ],

@@ -58,7 +58,7 @@ const isDark = computed({
 <style>
 body {
   background: #f7f7f7;
-  font-family: "Inter" sans-serif;
+  font-family: "Poppins" sans-serif;
 }
 
 .dark body {
@@ -172,7 +172,7 @@ pre {
   margin-bottom: 1rem;
   margin-top: 4px;
   font-size: 1rem;
-  font-family: "Courier New", monospace;
+  font-family: "Space Mono", monospace;
 }
 
 ol {
